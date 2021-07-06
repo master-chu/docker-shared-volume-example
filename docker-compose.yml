@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+    app1:
+        build:
+            context: .
+            dockerfile: ./app1/Dockerfile
+        volumes:
+            - ./app1:/opt/app1
+            - ./common:/opt/app1/common
+    app2:
+        build:
+            context: .
+            dockerfile: ./app2/Dockerfile
+        volumes:
+            - ./app2:/opt/app2
+            - ./common:/opt/app2/common
